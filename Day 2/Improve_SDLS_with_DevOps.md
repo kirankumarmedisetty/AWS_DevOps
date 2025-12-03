@@ -1,5 +1,5 @@
 Q. What is **SDLC**?
-Ans: **SDLC** stands for Software Development Life Cycle. It is a standard used by IT industry to Design, Develop and Test for delevering high quality product.
+**SDLC** stands for Software Development Life Cycle. It is a standard used by IT industry to Design, Develop and Test for delevering high quality product.
 
 Q. Key Phases/Stages of SDLC?
 Ans: 1. **Planning and Requirement Analysis** (Business Analysis or Product Owner): This initial phase involves gathering and analyzing requirements from stakeholders to 
