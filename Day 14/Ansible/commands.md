@@ -8,25 +8,28 @@ apt install ansible
 - Run the below command creates a file on single machine using inventory file.
   #ansible -i inventory 172.168.2.1 -m "shell" -a "touch testfile.txt"
 - Run the below command to create a file on all the machines mentioned in inventory file.
-  #ansible -i inventory all -m "shell" -a "touch testfile.txt"
+  #ansible -i inventory.ini all -m "shell" -a "touch testfile.txt"
 
 #Writing simple configuration using ansible. 
 #Lets install a nginx service and start that service.
 #Create a file eg. firstplaybook.yml and write below code.
+- Run the below command after writing the code mentioned:
+#ansible-playbook -i inventory.ini playbook.yml
 
 ---
 - name: Install nginx and start
-- hosts: all
-- become: true
+  hosts: all
+  become: true
 
-  tasks:
-   - name: Install nginx
-     apt:
-       name: nginx
-       state: present
-   - name: Start nginx
+  tasks: 
+   - name: install nginx
+     yum:
+        name: nginx
+        state: present 
+   - name: start nginx
      service:
         name: nginx
-        state: start
+        state: started
+        enabled: true
 
 #
